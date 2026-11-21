@@ -27,6 +27,9 @@
   .back{display:inline-block;margin-top:34px;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:9px 16px;border-radius:4px;}
   .back:hover{color:var(--ink);border-color:var(--muted);}
   footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.9rem;}
+  .foot-nav{display:flex;flex-wrap:wrap;gap:6px 20px;margin-bottom:10px;}
+  .foot-nav a{color:#e0a49c;text-decoration:none;font-size:.95rem;}
+  .foot-nav a:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
@@ -51,7 +54,15 @@
 
   <a class="back" href="https://silverqueenstoneworks.com/">← Back to Silver Queen Stoneworks</a>
 
-  <footer>Silver Queen Stoneworks — Lewiston, Idaho</footer>
+  <footer>
+    <nav class="foot-nav" aria-label="Site">
+      <a href="https://silverqueenstoneworks.com/catalog/">Catalog</a>
+      <a href="https://silverqueenstoneworks.com/shipping/">Shipping</a>
+      <a href="https://silverqueenstoneworks.com/returns/">Returns</a>
+      <a href="https://silverqueenstoneworks.com/">Home</a>
+    </nav>
+    Silver Queen Stoneworks — Lewiston, Idaho
+  </footer>
 </div>
 </body>
 </html>
