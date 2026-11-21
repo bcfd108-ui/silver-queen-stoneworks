@@ -531,7 +531,7 @@
           <span class="n">First</span>
           <h3>The cut</h3>
           <figure>
-            <video controls playsinline preload="none" width="576" height="720" poster="assets/work/cut-faces.webp" aria-label="Opening a cut stone to show the two striped faces, a silent nine-second clip">
+            <video controls playsinline preload="none" width="576" height="720" data-poster="assets/work/cut-faces.webp" aria-label="Opening a cut stone to show the two striped faces, a silent nine-second clip">
               <source src="assets/work/opening-the-stone.mp4" type="video/mp4" />
               <a href="assets/work/opening-the-stone.mp4">Watch the cut stone open</a>
             </video>
@@ -690,6 +690,10 @@
     for (var i = 0; i < routes.length; i++){
       var v = document.getElementById("view-" + routes[i]);
       if (v) v.classList.toggle("active", routes[i] === r);
+    }
+    if (r === "work") {
+      var video = document.querySelector("#view-work video[data-poster]");
+      if (video && !video.hasAttribute("poster")) video.poster = video.dataset.poster;
     }
     var links = document.querySelectorAll("[data-nav]");
     for (var j = 0; j < links.length; j++){
