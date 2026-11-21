@@ -85,6 +85,27 @@
   .btn-row{margin-top:22px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
   .backlink{color:var(--ink-dim);text-decoration:none;font-weight:600;font-size:15px}
   .backlink:hover{color:var(--amber-hi)}
+  [hidden]{display:none!important}
+  .pcard .ct{color:var(--muted);font-size:14px}
+  .search-panel{border:1px solid var(--line);border-radius:var(--radius);
+    background:linear-gradient(160deg,var(--panel2),var(--panel));padding:22px 22px 18px;margin:26px 0 4px}
+  .search-panel label{font-family:"Spectral",Georgia,serif;font-size:21px;font-weight:700;display:block;margin:0 0 4px}
+  .search-panel .hint{color:var(--muted);font-size:14.5px;margin:0 0 14px}
+  .search-row{display:flex;gap:12px;flex-wrap:wrap}
+  .search-row input[type="search"],.search-row select{
+    background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:4px;
+    font:inherit;font-size:16px;padding:12px 14px;min-height:48px}
+  .search-row input[type="search"]{flex:1 1 260px}
+  .search-row select{flex:0 1 250px}
+  .search-clear{background:none;border:1px solid var(--line);color:var(--ink-dim);border-radius:4px;
+    padding:12px 16px;min-height:48px;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+  .search-clear:hover{color:var(--ink);border-color:var(--amber-deep)}
+  .search-count{color:var(--muted);font-size:15px;margin:16px 0 0}
+  .search-none{color:var(--ink-dim);font-size:16.5px;padding:16px 0 4px;margin:0}
+  .rel{padding:46px 0 6px}
+  .rel h2{margin:0 0 6px;font-size:clamp(26px,3.6vw,34px);font-weight:700}
+  .rel .rel-sub{color:var(--muted);font-size:15.5px;margin:0}
+  .rel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:22px 0 6px}
   footer{margin-top:84px;border-top:1px solid var(--line);background:var(--bg2)}
   .foot-in{max-width:1180px;margin:0 auto;padding:34px 20px 8px;display:flex;flex-wrap:wrap;gap:18px 30px}
   .foot-brand{font-family:"Spectral",Georgia,serif;font-size:20px;font-weight:700}
@@ -96,11 +117,12 @@
     color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:22px}
   @media (max-width:860px){
     .grid,.kinds{grid-template-columns:1fr 1fr}
+    .rel-grid{grid-template-columns:1fr 1fr}
     .piece{grid-template-columns:1fr}
     .topbar-in{padding:0 14px}
     .foot-in,.foot-base{padding-left:16px;padding-right:16px}
   }
-  @media (max-width:560px){ .grid,.kinds{grid-template-columns:1fr} }
+  @media (max-width:560px){ .grid,.kinds,.rel-grid{grid-template-columns:1fr} }
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Product", "name": "Blue Mountain Jasper Necklace", "image": "https://img1.wsimg.com/isteam/ip/1b7107a8-73fb-4094-9e9e-f8ab1ae6e43d/20260120_102958.jpg", "description": "Look near the outside of this Blue Mountain jasper oval. I see a pale line curving around the smoky blue-gray middle, almost picking out the same shape a second time.", "brand": {"@type": "Brand", "name": "Silver Queen Stoneworks"}, "offers": {"@type": "Offer", "url": "https://shop.silverqueenstoneworks.com/ols/products/blue-mountain-jasper-necklace1", "priceCurrency": "USD", "price": "35.00", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition"}}
@@ -138,6 +160,25 @@
       <p class="one-note"><strong>There isn&rsquo;t a second one.</strong> Each piece is a single stone, and the photo is the exact piece. When it sells, that particular stone is gone.</p>
     </div>
   </div>
+  <section class="rel" aria-label="More from this shelf">
+    <h2>More from this shelf</h2>
+    <p class="rel-sub">Other pieces in Necklaces &middot; <a href="/catalog/necklaces/">see the whole shelf &rarr;</a></p>
+    <div class="rel-grid">
+      <a class="pcard" href="/pieces/plume-agate-necklace1/">
+          <img src="https://img1.wsimg.com/isteam/ip/1b7107a8-73fb-4094-9e9e-f8ab1ae6e43d/20260120_120617.jpg/:/rs=w:600" alt="Plume Agate Necklace" loading="lazy" />
+          <span class="pb"><h3>Plume Agate Necklace</h3><span class="pr">$35</span><span class="go">See the piece &rarr;</span></span>
+        </a><a class="pcard" href="/pieces/malachite-necklace2/">
+          <img src="https://img1.wsimg.com/isteam/ip/1b7107a8-73fb-4094-9e9e-f8ab1ae6e43d/20260119_164503.jpg/:/rs=w:600" alt="Malachite Necklace" loading="lazy" />
+          <span class="pb"><h3>Malachite Necklace</h3><span class="pr">$35</span><span class="go">See the piece &rarr;</span></span>
+        </a><a class="pcard" href="/pieces/malachite-necklace3/">
+          <img src="https://img1.wsimg.com/isteam/ip/1b7107a8-73fb-4094-9e9e-f8ab1ae6e43d/20260119_163852.jpg/:/rs=w:600" alt="Malachite Necklace" loading="lazy" />
+          <span class="pb"><h3>Malachite Necklace</h3><span class="pr">$35</span><span class="go">See the piece &rarr;</span></span>
+        </a><a class="pcard" href="/pieces/malachite-necklace4/">
+          <img src="https://img1.wsimg.com/isteam/ip/1b7107a8-73fb-4094-9e9e-f8ab1ae6e43d/20260119_164224.jpg/:/rs=w:600" alt="Malachite Necklace" loading="lazy" />
+          <span class="pb"><h3>Malachite Necklace</h3><span class="pr">$35</span><span class="go">See the piece &rarr;</span></span>
+        </a>
+    </div>
+  </section>
 </div>
 </main>
 <footer>
@@ -155,6 +196,7 @@
       <a href="/#/questions">Questions</a>
       <a href="/#/bench">From the Bench</a>
       <a href="/returns/">Returns</a>
+      <a href="/shipping/">Shipping</a>
       <a href="tel:+12084001427">208-400-1427</a>
     </div>
   </div>
