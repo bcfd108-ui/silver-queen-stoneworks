@@ -235,11 +235,18 @@
   .page-head{padding:56px 0 6px;max-width:46em}
   .page-head h1,.page-head h2{margin:0 0 12px;font-size:clamp(34px,5.4vw,54px);font-weight:800;line-height:1.08}
   .page-head p{margin:0;color:var(--ink-dim);font-size:18.5px;line-height:1.6}
+  .work-intro{display:grid;grid-template-columns:1.1fr 1fr;grid-template-areas:"title photo" "intro photo";align-content:center;column-gap:clamp(24px,5vw,80px);max-width:none}
+  .work-intro .work-title{grid-area:title;align-self:end}
+  .work-intro p{grid-area:intro;align-self:start}
+  .work-intro img{grid-area:photo;width:100%;height:auto;border-radius:var(--radius)}
   .work-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
   .step{border-top:3px solid var(--amber);background:var(--panel);border-radius:0 0 var(--radius) var(--radius);padding:24px 22px}
   .step .n{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--amber-hi);text-transform:uppercase}
   .step h3{margin:8px 0 10px;font-size:24px}
   .step p{margin:0;color:var(--ink-dim);font-size:16px}
+  .step figure{margin:0 0 14px}
+  .step figure img,.step figure video{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);background:var(--bg)}
+  .step figcaption{margin-top:7px;color:var(--ink-dim);font-size:14px;line-height:1.45}
   .about-layout{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-top:30px}
   .about-layout img.logo{width:220px;height:220px;border-radius:50%;border:1px solid var(--line)}
   .closing-line{
@@ -303,6 +310,9 @@
   /* ---------- mobile ---------- */
   @media (max-width:900px){
     .cards,.kinds,.work-steps{grid-template-columns:1fr}
+    .work-intro{grid-template-columns:1fr;grid-template-areas:"title" "photo" "intro";gap:12px}
+    .work-intro img{max-height:380px;object-fit:cover}
+    .step figure img,.step figure video{max-height:480px;object-fit:contain}
     .split,.info-grid{grid-template-columns:1fr}
     .facts-in{grid-template-columns:1fr 1fr}
     .fact:nth-child(3){border-left:none;padding-left:0}
@@ -508,25 +518,43 @@
   <!-- ================= THE WORK ================= -->
   <div class="view" id="view-work">
     <div class="wrap">
-      <div class="page-head">
-        <div class="rule" aria-hidden="true"></div>
-        <h1>The Work</h1>
+      <div class="page-head work-intro">
+        <div class="work-title">
+          <div class="rule" aria-hidden="true"></div>
+          <h1>The Work</h1>
+        </div>
+        <img src="assets/work/at-the-wheel.webp" width="720" height="576" alt="My hands steadying a wet stone at the wheel in my shop" loading="lazy" />
         <p>Every piece in this shop started as a rough rock. I find the stone, cut it, grind it, polish it, and if it becomes a necklace, I set it myself. Nothing here is mass-produced and nothing is exactly repeatable &mdash; two cuts from the same rock can show two different patterns.</p>
       </div>
       <div class="work-steps">
         <div class="step">
           <span class="n">First</span>
           <h3>The cut</h3>
+          <figure>
+            <video controls playsinline preload="none" width="576" height="720" poster="assets/work/cut-faces.webp" aria-label="Opening a cut stone to show the two striped faces, a silent nine-second clip">
+              <source src="assets/work/opening-the-stone.mp4" type="video/mp4" />
+              <a href="assets/work/opening-the-stone.mp4">Watch the cut stone open</a>
+            </video>
+            <figcaption>I open the two halves so you can follow the stripes across the cut.</figcaption>
+          </figure>
           <p>Cutting is the decision. Once the saw goes through, you can&rsquo;t put it back. I cut to show the best face the stone has, and sometimes the stone disagrees with me.</p>
         </div>
         <div class="step">
           <span class="n">Second</span>
           <h3>The polish</h3>
+          <figure>
+            <img src="assets/work/polished-thunder-egg.webp" width="600" height="750" loading="lazy" alt="Rust-red center and dark bands inside the rough rim of a face-polished Baker Ranch thunder egg" />
+            <figcaption>The face of this Baker Ranch thunder egg is polished. The rough rim shows where I stopped.</figcaption>
+          </figure>
           <p>Grinding and polishing is the slow part. That&rsquo;s where the color and the banding come up, and the stone starts looking like what it was hiding.</p>
         </div>
         <div class="step">
           <span class="n">Last</span>
           <h3>The setting</h3>
+          <figure>
+            <img src="assets/malachite-necklace.webp" width="600" height="720" loading="lazy" alt="Green malachite teardrop hanging from its gold-colored bail and chain" />
+            <figcaption>The bail sits at the narrow end of this malachite teardrop.</figcaption>
+          </figure>
           <p>When a piece becomes a necklace, I set it myself. When it&rsquo;s a slab or a tower, it stands on its own. Either way, when it sells, that stone is gone. There isn&rsquo;t a second one.</p>
         </div>
       </div>
